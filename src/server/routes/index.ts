@@ -1,6 +1,8 @@
 import { Router } from "express";
 
 import { MarcasController, MotoresController } from "./../controllers";
+import { EstoqueController } from "../controllers/estoque";
+import { CarcacaController } from "../controllers/carcaca";
 
 const router = Router();
 
@@ -12,6 +14,10 @@ router.get("/", (req, res) => {
 router.post("/motores", MotoresController.create);
 
 router.post("/marcas", MarcasController.create);
+
+router.post("/estoque", EstoqueController.create);
+
+router.post("/carcaca", CarcacaController.create);
 
 
 export { router };
