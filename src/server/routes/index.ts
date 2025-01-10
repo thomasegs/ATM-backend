@@ -3,6 +3,8 @@ import { Router } from "express";
 import { MarcasController, MotoresController } from "./../controllers";
 import { EstoqueController } from "../controllers/estoque";
 import { CarcacaController } from "../controllers/carcaca";
+import { EstadoController } from "../controllers/estado";
+import { CidadeController } from "../controllers/cidade";
 
 const router = Router();
 
@@ -18,6 +20,10 @@ router.post("/marcas", MarcasController.create);
 router.post("/estoque", EstoqueController.create);
 
 router.post("/carcaca", CarcacaController.create);
+
+router.post("/estado", EstadoController.create);
+
+router.post("/cidade", CidadeController.create);
 
 
 export { router };

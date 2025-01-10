@@ -1,6 +1,6 @@
 interface IEstoque {
-    nome: string,
-    obs?: string
+    NOME: string,
+    OBS?: string
 }
 
 export {IEstoque};

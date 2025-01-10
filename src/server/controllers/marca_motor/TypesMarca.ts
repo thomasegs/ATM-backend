@@ -1,5 +1,5 @@
 interface IMarca {
-    nome: string
+    NOME: string
 }
 
 export {IMarca};

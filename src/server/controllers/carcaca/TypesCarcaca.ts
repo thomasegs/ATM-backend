@@ -1,5 +1,5 @@
 interface ICarcaca {
-  nome: string;
+  NOME: string;
 }
 
 export { ICarcaca };
