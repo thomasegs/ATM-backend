@@ -5,6 +5,7 @@ import { EstoqueController } from "../controllers/estoque";
 import { CarcacaController } from "../controllers/carcaca";
 import { EstadoController } from "../controllers/estado";
 import { CidadeController } from "../controllers/cidade";
+import { BairroController } from "../controllers/bairro";
 
 const router = Router();
 
@@ -24,6 +25,8 @@ router.post("/carcaca", CarcacaController.create);
 router.post("/estado", EstadoController.create);
 
 router.post("/cidade", CidadeController.create);
+
+router.post("/bairro", BairroController.create);
 
 
 export { router };
