@@ -8,6 +8,7 @@ import { BairroController } from "../controllers/bairro";
 import { EnderecoController } from "../controllers/endereco";
 import { MotoresController } from "../controllers/motores";
 import { MarcasController } from "../controllers/marca_motor";
+import { FornecedorController } from "../controllers/fornecedor";
 
 const router = Router();
 
@@ -31,5 +32,7 @@ router.post("/cidade", CidadeController.create);
 router.post("/bairro", BairroController.create);
 
 router.post("/enderecos", EnderecoController.create);
+
+router.post("/fornecedor", FornecedorController.create);
 
 export { router };
