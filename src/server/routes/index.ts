@@ -1,12 +1,14 @@
 import { Router } from "express";
-import { home } from "./home/home";
-import { login } from "./login/login";
-import { motores } from "./motores/motores";
+
+import { MotoresController } from "./../controllers";
 
 const router = Router();
 
-router.use(home);
-router.use(login);
-router.use(motores);
+router.get("/", (req, res) => {
+    res.send("Olá mundo");
+  });
+
+router.post("/motores", MotoresController.create);
+
 
 export { router };
