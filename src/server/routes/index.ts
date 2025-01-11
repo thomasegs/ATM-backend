@@ -9,6 +9,7 @@ import { EnderecoController } from "../controllers/endereco";
 import { MotoresController } from "../controllers/motores";
 import { MarcasController } from "../controllers/marca_motor";
 import { FornecedorController } from "../controllers/fornecedor";
+import { PrateleiraController } from "../controllers/prateleira";
 
 const router = Router();
 
@@ -34,5 +35,7 @@ router.post("/bairro", BairroController.create);
 router.post("/enderecos", EnderecoController.create);
 
 router.post("/fornecedor", FornecedorController.create);
+
+router.post("/prateleira", PrateleiraController.create);
 
 export { router };
