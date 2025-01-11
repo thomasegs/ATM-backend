@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
+import { IMotor } from "./TypesMotor";
 
-export const create = (req: Request, res: Response) => {
+export const create = (req: Request<unknown, unknown, IMotor>, res: Response) => {
   
     const data = req.body;
     
