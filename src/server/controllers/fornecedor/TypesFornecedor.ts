@@ -12,7 +12,7 @@ const bodyValidation:yup.Schema<IForncedor> = yup.object().shape({
     CNPJ: yup.string().required().length(14),
     TELEFONE: yup.string().required(),
     TEL_MOVEL: yup.string(),
-    ID_ENDERECO: yup.number().required().positive(),
+    ID_ENDERECO: yup.number().positive().integer().required(),
 });
 
 export { IForncedor, bodyValidation };
