@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { bodyValidation, ICarcaca } from "./TypesCarcaca";
 import * as yup from "yup";
+import { StatusCodes } from "http-status-codes";
 
 export const create = async (
   req: Request<unknown, unknown, ICarcaca>,
@@ -9,7 +10,7 @@ export const create = async (
   let validatedData: ICarcaca | undefined = undefined;
   try {
     validatedData = await bodyValidation.validate(req.body);
-    res.send("Carcaça criada com sucesso.");
+    res.status(StatusCodes.CREATED).send("Carcaça criada com sucesso.");
 
     console.log(validatedData);
   } catch (error) {

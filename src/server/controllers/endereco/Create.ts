@@ -14,7 +14,7 @@ export const create = async (req: Request<unknown, unknown, IEndereco>, res: Res
     } catch (error) {
         const yupError = error as yup.ValidationError;
 
-        return res.json({
+        return res.status(StatusCodes.BAD_REQUEST).json({
             errors: {
                 default: yupError.message,
             }

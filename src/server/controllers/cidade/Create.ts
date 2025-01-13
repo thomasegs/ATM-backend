@@ -11,12 +11,12 @@ export const create = async (
 
   try {
     validatedData = await bodyValidation.validate(req.body);
-    res.status(StatusCodes.OK).send("Cidade criada com sucesso.");
+    res.status(StatusCodes.CREATED).send("Cidade criada com sucesso.");
     console.log(validatedData);
   } catch (error) {
     const yupError = error as yup.ValidationError;
 
-    return res.json({
+    return res.status(StatusCodes.BAD_REQUEST).json({
       errors: {
         default: yupError.message,
       },
