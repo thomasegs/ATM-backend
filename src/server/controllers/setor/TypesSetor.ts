@@ -1,6 +1,12 @@
+import * as yup from "yup";
 interface ISetor {
-    NOME: string,
-    ID_USUARIO: number
+  NOME: string;
+  ID_USUARIO: number;
 }
 
-export { ISetor };
+const bodyValidation: yup.Schema<ISetor> = yup.object().shape({
+  NOME: yup.string().required().min(3),
+  ID_USUARIO: yup.number().integer().positive().required(),
+});
+
+export { ISetor, bodyValidation };
