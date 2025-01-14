@@ -1,5 +1,5 @@
-import *  as create from "./Create";
+import * as create from "./Create";
 
 export const EstadoController = {
-    ...create,
+  ...create,
 };
