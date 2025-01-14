@@ -1,5 +1,5 @@
 import * as create from "./Create";
 
-export const SetorController ={
-    ...create
+export const SetorController = {
+  ...create,
 };

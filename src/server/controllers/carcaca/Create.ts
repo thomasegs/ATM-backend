@@ -1,25 +1,14 @@
 import { Request, Response } from "express";
-import { bodyValidation, ICarcaca } from "./TypesCarcaca";
-import * as yup from "yup";
-import { StatusCodes } from "http-status-codes";
+import { ICarcaca, bodyValidation } from "./TypesCarcaca";
+import { validation } from "../../shared/middlewares";
+
+export const createBodyValidation = validation("body", bodyValidation);
 
 export const create = async (
   req: Request<unknown, unknown, ICarcaca>,
   res: Response
 ) => {
-  let validatedData: ICarcaca | undefined = undefined;
-  try {
-    validatedData = await bodyValidation.validate(req.body);
-    res.status(StatusCodes.CREATED).send("Carcaça criada com sucesso.");
+  console.log(req.body);
 
-    console.log(validatedData);
-  } catch (error) {
-    const yupError = error as yup.ValidationError;
-
-    return res.json({
-      errors: {
-        default: yupError.message,
-      },
-    });
-  }
+  return res.send("Carcaça criado com sucesso.");
 };

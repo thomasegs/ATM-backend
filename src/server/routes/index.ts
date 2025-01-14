@@ -17,37 +17,80 @@ import { MovimentacaoController } from "../controllers/movimentacao";
 
 const router = Router();
 
-//Rota de teste sem uso por hora
+// Rota de teste sem uso por hora
 router.get("/", (req, res) => {
   res.send("Olá mundo");
 });
 
-router.post("/motores", MotoresController.create);
-
-router.post("/marcas", MarcasController.create);
-
-router.post("/estoque", EstoqueController.create);
-
-router.post("/carcaca", CarcacaController.create);
-
-router.post("/estado", EstadoController.create);
-
-router.post("/cidade", CidadeController.create);
-
-router.post("/bairro", BairroController.create);
-
-router.post("/enderecos", EnderecoController.create);
-
-router.post("/fornecedor", FornecedorController.create);
-
-router.post("/prateleira", PrateleiraController.create);
-
-router.post("/usuario", UsuarioController.create);
-
-router.post("/setor", SetorController.create);
-
-router.post("/usuario_setor", UsuarioLotadoController.create);
-
-router.post("/movimentacao", MovimentacaoController.create);
+router.post(
+  "/motores",
+  MotoresController.createBodyValidation,
+  MotoresController.create
+);
+router.post(
+  "/marcas",
+  MarcasController.createBodyValidation,
+  MarcasController.create
+);
+router.post(
+  "/estoque",
+  EstoqueController.createBodyValidation,
+  EstoqueController.create
+);
+router.post(
+  "/carcaca",
+  CarcacaController.createBodyValidation,
+  CarcacaController.create
+);
+router.post(
+  "/estado",
+  EstadoController.createBodyValidation,
+  EstadoController.create
+);
+router.post(
+  "/cidade",
+  CidadeController.createBodyValidation,
+  CidadeController.create
+);
+router.post(
+  "/bairro",
+  BairroController.createBodyValidation,
+  BairroController.create
+);
+router.post(
+  "/enderecos",
+  EnderecoController.createBodyValidation,
+  EnderecoController.create
+);
+router.post(
+  "/fornecedor",
+  FornecedorController.createBodyValidation,
+  FornecedorController.create
+);
+router.post(
+  "/prateleira",
+  PrateleiraController.createBodyValidation,
+  PrateleiraController.create
+);
+router.post(
+  "/usuario",
+  UsuarioController.createBodyValidation,
+  UsuarioController.create
+);
+router.post(
+  "/setor",
+  SetorController.createBodyValidation,
+  SetorController.create
+);
+router.post(
+  "/usuario_setor",
+  UsuarioLotadoController.createBodyValidation,
+  UsuarioLotadoController.create
+);
+router.post(
+  "/movimentacao",
+  MovimentacaoController.createBodyValidation,
+  MovimentacaoController.create
+);
 
 export { router };

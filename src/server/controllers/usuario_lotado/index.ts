@@ -1,5 +1,5 @@
 import * as create from "./Create";
 
-export const UsuarioLotadoController ={
-    ...create
+export const UsuarioLotadoController = {
+  ...create,
 };

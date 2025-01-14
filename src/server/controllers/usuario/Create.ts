@@ -1,26 +1,14 @@
 import { Request, Response } from "express";
-import { bodyValidation, IUsuario } from "./TypesUsuario";
-import { StatusCodes } from "http-status-codes";
-import * as yup from "yup";
+import { IUsuario, bodyValidation } from "./TypesUsuario";
+import { validation } from "../../shared/middlewares";
+
+export const createBodyValidation = validation("body", bodyValidation);
 
 export const create = async (
   req: Request<unknown, unknown, IUsuario>,
   res: Response
 ) => {
-  let validatedData: IUsuario | undefined = undefined;
+  console.log(req.body);
 
-  try {
-    validatedData = await bodyValidation.validate(req.body);
-    res.status(StatusCodes.CREATED).send("Usuário criado com sucesso.");
-
-    console.log(validatedData);
-  } catch (error) {
-    const yupError = error as yup.ValidationError;
-
-    res.status(StatusCodes.BAD_REQUEST).json({
-      errors: {
-        default: yupError.message,
-      },
-    });
-  }
+  return res.send("Usuario criado com sucesso.");
 };

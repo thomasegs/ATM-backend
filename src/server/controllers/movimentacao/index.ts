@@ -1,5 +1,5 @@
 import * as create from "./Create";
 
-export const MovimentacaoController ={
-    ...create
+export const MovimentacaoController = {
+  ...create,
 };

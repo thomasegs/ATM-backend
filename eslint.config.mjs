@@ -11,8 +11,8 @@ export default [
   {
     rules: {
       "no-console": "warn",
-      "semi": ["error", "always"],
-      "@typescript-eslint/no-empty-interface": "off"
+      semi: ["error", "always"],
+      "@typescript-eslint/no-empty-interface": "off",
     },
   },
 ];

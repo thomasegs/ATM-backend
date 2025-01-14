@@ -1,23 +1,14 @@
-import { Response, Request} from "express";
-import { bodyValidation, IEndereco } from "./TypesEndereco";
-import { StatusCodes } from "http-status-codes";
-import * as yup from "yup";
+import { Request, Response } from "express";
+import { IEndereco, bodyValidation } from "./TypesEndereco";
+import { validation } from "../../shared/middlewares";
 
-export const create = async (req: Request<unknown, unknown, IEndereco>, res: Response) => {
-    let validatedBody: IEndereco | undefined = undefined;
+export const createBodyValidation = validation("body", bodyValidation);
 
-    try {
-        validatedBody = await bodyValidation.validate(req.body);
-        res.status(StatusCodes.CREATED).send("Endereço criado com sucesso.");
+export const create = async (
+  req: Request<unknown, unknown, IEndereco>,
+  res: Response
+) => {
+  console.log(req.body);
 
-        console.log(validatedBody);
-    } catch (error) {
-        const yupError = error as yup.ValidationError;
-
-        return res.status(StatusCodes.BAD_REQUEST).json({
-            errors: {
-                default: yupError.message,
-            }
-        });
-    }
+  return res.send("Endereço criado com sucesso.");
 };
