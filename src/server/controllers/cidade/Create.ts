@@ -1,32 +1,14 @@
 import { Request, Response } from "express";
-import { bodyValidation, ICidade } from "./TypesCidade";
-import * as yup from "yup";
-import { StatusCodes } from "http-status-codes";
+import { ICidade, bodyValidation } from "./TypesCidade";
+import { validation } from "../../shared/middlewares";
+
+export const createBodyValidation = validation("body", bodyValidation);
 
 export const create = async (
   req: Request<unknown, unknown, ICidade>,
   res: Response
 ) => {
-  let validatedData: ICidade | undefined = undefined;
+  console.log(req.body);
 
-  try {
-    validatedData = await bodyValidation.validate(req.body, {
-      abortEarly: false,
-    });
-    res.status(StatusCodes.CREATED).send("Cidade criada com sucesso.");
-    console.log(validatedData);
-  } catch (err) {
-    const yupError = err as yup.ValidationError;
-    const validationError: Record<string, string> = {};
-
-    yupError.inner.forEach((error) => {
-      if (!error.path) return;
-
-      validationError[error.path] = error.message;
-    });
-
-    res.status(StatusCodes.BAD_REQUEST).json({
-      errors: validationError,
-    });
-  }
+  return res.send("Cidade criado com sucesso.");
 };
