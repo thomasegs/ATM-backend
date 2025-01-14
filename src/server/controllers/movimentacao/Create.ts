@@ -10,5 +10,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Movimentação criado com sucesso.");
+  res.send("Movimentação criado com sucesso.");
 };

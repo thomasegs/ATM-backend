@@ -10,5 +10,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Prateleira criado com sucesso.");
+  res.send("Prateleira criado com sucesso.");
 };

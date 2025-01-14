@@ -10,5 +10,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Bairro criado com sucesso.");
+  res.send("Bairro criado com sucesso.");
 };

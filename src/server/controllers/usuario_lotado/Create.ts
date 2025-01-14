@@ -10,5 +10,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Usuario_lotado criado com sucesso.");
+  res.send("Usuario_lotado criado com sucesso.");
 };

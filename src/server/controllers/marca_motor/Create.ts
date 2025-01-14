@@ -10,5 +10,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Marca_motor criado com sucesso.");
+  res.send("Marca_motor criado com sucesso.");
 };
