@@ -6,6 +6,12 @@ interface IEndereco {
   ID_BAIRRO: number;
 }
 
+interface IQueryProps {
+  page?: number;
+  limit?: number;
+  filter?: string;
+}
+
 const bodyValidation: yup.Schema<IEndereco> = yup.object().shape({
   RUA: yup.string().required().min(3),
   NUMERO: yup.number().integer().positive(),
@@ -13,4 +19,10 @@ const bodyValidation: yup.Schema<IEndereco> = yup.object().shape({
   ID_BAIRRO: yup.number().required().integer().positive(),
 });
 
-export { IEndereco, bodyValidation };
+const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
+  page: yup.number().integer().positive(),
+  limit: yup.number().integer().positive(),
+  filter: yup.string().min(2),
+});
+
+export { IEndereco, bodyValidation, IQueryProps, queryValidation };

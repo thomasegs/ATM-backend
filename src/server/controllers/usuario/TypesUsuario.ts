@@ -8,6 +8,12 @@ interface IUsuario {
   TEL_MOVEL?: string;
 }
 
+interface IQueryProps {
+  page?: number;
+  limit?: number;
+  filter?: string;
+}
+
 const bodyValidation: yup.Schema<IUsuario> = yup.object().shape({
   NOME: yup.string().required().min(3),
   EMAIL: yup.string().required().min(5),
@@ -16,4 +22,10 @@ const bodyValidation: yup.Schema<IUsuario> = yup.object().shape({
   TEL_MOVEL: yup.string(),
 });
 
-export { IUsuario, bodyValidation };
+const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
+  page: yup.number().integer().positive(),
+  limit: yup.number().integer().positive(),
+  filter: yup.string().min(2),
+});
+
+export { IUsuario, bodyValidation, IQueryProps, queryValidation };
