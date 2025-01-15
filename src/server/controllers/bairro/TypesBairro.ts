@@ -11,6 +11,9 @@ interface IQueryProps {
   filter?: string;
 }
 
+interface IParamProps {
+  ID?: number;
+}
 
 const bodyValidation: yup.Schema<IBairro> = yup.object().shape({
   NOME: yup.string().required().min(3),
@@ -23,4 +26,15 @@ const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
   filter: yup.string().min(2),
 });
 
-export { IBairro, bodyValidation, IQueryProps, queryValidation };
+const paramValidation: yup.Schema<IParamProps> = yup.object().shape({
+  ID: yup.number().required().positive().integer(),
+});
+
+export {
+  IBairro,
+  bodyValidation,
+  IQueryProps,
+  queryValidation,
+  IParamProps,
+  paramValidation,
+};

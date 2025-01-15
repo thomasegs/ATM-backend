@@ -32,6 +32,11 @@ router.get(
   MotoresController.createQueryValidation,
   MotoresController.getall
 );
+router.get(
+  "/motores/:ID",
+  MotoresController.createParamValidation,
+  MotoresController.getbyid
+);
 
 router.post(
   "/marcas",
@@ -42,6 +47,11 @@ router.get(
   "/marcas",
   MarcasController.createQueryValidation,
   MarcasController.getall
+);
+router.get(
+  "/marcas/:ID",
+  MarcasController.createParamValidation,
+  MarcasController.getbyid
 );
 
 router.post(
@@ -54,6 +64,11 @@ router.get(
   EstoqueController.createQueryValidation,
   EstoqueController.getall
 );
+router.get(
+  "/estoque/:ID",
+  EstoqueController.createParamValidation,
+  EstoqueController.getbyid
+);
 
 router.post(
   "/carcaca",
@@ -64,6 +79,11 @@ router.get(
   "/carcaca",
   CarcacaController.createQueryValidation,
   CarcacaController.getall
+);
+router.get(
+  "/carcaca/:ID",
+  CarcacaController.createParamValidation,
+  CarcacaController.getbyid
 );
 
 router.post(
@@ -76,6 +96,11 @@ router.get(
   EstadoController.createQueryValidation,
   EstadoController.getall
 );
+router.get(
+  "/estado/:ID",
+  EstadoController.createParamValidation,
+  EstadoController.getbyid
+);
 
 router.post(
   "/cidade",
@@ -86,6 +111,11 @@ router.get(
   "/cidade",
   CidadeController.createQueryValidation,
   CidadeController.getall
+);
+router.get(
+  "/cidade/:ID",
+  CidadeController.createParamValidation,
+  CidadeController.getbyid
 );
 
 router.post(
@@ -98,6 +128,11 @@ router.get(
   BairroController.createQueryValidation,
   BairroController.getall
 );
+router.get(
+  "/bairro/:ID",
+  BairroController.createParamValidation,
+  BairroController.getbyid
+);
 
 router.post(
   "/enderecos",
@@ -108,6 +143,11 @@ router.get(
   "/enderecos",
   EnderecoController.createQueryValidation,
   EnderecoController.getall
+);
+router.get(
+  "/enderecos/:ID",
+  EnderecoController.createParamValidation,
+  EnderecoController.getbyid
 );
 
 router.post(
@@ -120,6 +160,11 @@ router.get(
   FornecedorController.createQueryValidation,
   FornecedorController.getall
 );
+router.get(
+  "/fornecedor/:ID",
+  FornecedorController.createParamValidation,
+  FornecedorController.getbyid
+);
 
 router.post(
   "/prateleira",
@@ -130,6 +175,11 @@ router.get(
   "/prateleira",
   PrateleiraController.createQueryValidation,
   PrateleiraController.getall
+);
+router.get(
+  "/prateleira/:ID",
+  PrateleiraController.createParamValidation,
+  PrateleiraController.getbyid
 );
 
 router.post(
@@ -142,6 +192,11 @@ router.get(
   UsuarioController.createQueryValidation,
   UsuarioController.getall
 );
+router.get(
+  "/usuario/:ID",
+  UsuarioController.createParamValidation,
+  UsuarioController.getbyid
+);
 
 router.post(
   "/setor",
@@ -152,6 +207,11 @@ router.get(
   "/setor",
   SetorController.createQueryValidation,
   SetorController.getall
+);
+router.get(
+  "/setor/:ID",
+  SetorController.createParamValidation,
+  SetorController.getbyid
 );
 
 router.post(
@@ -164,6 +224,11 @@ router.get(
   UsuarioLotadoController.createQueryValidation,
   UsuarioLotadoController.getall
 );
+router.get(
+  "/usuario_setor/:ID",
+  UsuarioLotadoController.createParamValidation,
+  UsuarioLotadoController.getbyid
+);
 
 router.post(
   "/movimentacao",
@@ -174,6 +239,11 @@ router.get(
   "/movimentacao",
   MovimentacaoController.createQueryValidation,
   MovimentacaoController.getall
+);
+router.get(
+  "/movimentacao/:ID",
+  MovimentacaoController.createParamValidation,
+  MovimentacaoController.getbyid
 );
 
 export { router };

@@ -13,6 +13,10 @@ interface IQueryProps {
   filter?: string;
 }
 
+interface IParamProps {
+  ID?: number
+}
+
 const bodyValidation: yup.Schema<IMotor> = yup.object().shape({
   ID_MARCA: yup.number().positive().integer().required(),
   POLOS: yup.number(),
@@ -27,4 +31,8 @@ const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
   filter: yup.string().min(2),
 });
 
-export { IMotor, bodyValidation, IQueryProps, queryValidation};
+const paramValidation: yup.Schema<IParamProps> = yup.object().shape({
+  ID: yup.number().positive().integer().required()
+});
+
+export { IMotor, bodyValidation, IQueryProps, queryValidation, IParamProps, paramValidation };
