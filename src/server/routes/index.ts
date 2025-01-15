@@ -27,6 +27,13 @@ router.post(
   MotoresController.createBodyValidation,
   MotoresController.create
 );
+
+router.get(
+  "/motores",
+  MotoresController.createQueryValidation,
+  MotoresController.getall
+);
+
 router.post(
   "/marcas",
   MarcasController.createBodyValidation,
