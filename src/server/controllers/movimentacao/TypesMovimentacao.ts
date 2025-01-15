@@ -9,6 +9,16 @@ interface IMovimentacao {
   OBS?: string;
 }
 
+interface IQueryProps {
+  page?: number;
+  limit?: number;
+  filter?: string;
+}
+
+interface IParamProps {
+  ID?: number;
+}
+
 const bodyValidation: yup.Schema<IMovimentacao> = yup.object().shape({
   ID_SETOR: yup.number().integer().positive(),
   ID_FORNECEDOR: yup.number().integer().positive(),
@@ -19,4 +29,21 @@ const bodyValidation: yup.Schema<IMovimentacao> = yup.object().shape({
   OBS: yup.string(),
 });
 
-export { IMovimentacao, bodyValidation };
+const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
+  page: yup.number().integer().positive(),
+  limit: yup.number().integer().positive(),
+  filter: yup.string().min(2),
+});
+
+const paramValidation: yup.Schema<IParamProps> = yup.object().shape({
+  ID: yup.number().required().positive().integer(),
+});
+
+export {
+  IMovimentacao,
+  bodyValidation,
+  IQueryProps,
+  queryValidation,
+  IParamProps,
+  paramValidation,
+};

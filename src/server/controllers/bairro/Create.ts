@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { IBairro, bodyValidation } from "./TypesBairro";
 import { validation } from "../../shared/middlewares";
+import { StatusCodes } from "http-status-codes";
 
 export const createBodyValidation = validation("body", bodyValidation);
 
@@ -10,5 +11,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  return res.send("Bairro criado com sucesso.");
+  res.status(StatusCodes.INTERNAL_SERVER_ERROR).send("Create de bairro ainda não implementado.");
 };

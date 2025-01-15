@@ -7,6 +7,16 @@ interface IMotor {
   OBS?: string;
 }
 
+interface IQueryProps {
+  page?: number;
+  limit?: number;
+  filter?: string;
+}
+
+interface IParamProps {
+  ID?: number
+}
+
 const bodyValidation: yup.Schema<IMotor> = yup.object().shape({
   ID_MARCA: yup.number().positive().integer().required(),
   POLOS: yup.number(),
@@ -15,4 +25,14 @@ const bodyValidation: yup.Schema<IMotor> = yup.object().shape({
   OBS: yup.string(),
 });
 
-export { IMotor, bodyValidation };
+const queryValidation: yup.Schema<IQueryProps> = yup.object().shape({
+  page: yup.number().integer().positive(),
+  limit: yup.number().integer().positive(),
+  filter: yup.string().min(2),
+});
+
+const paramValidation: yup.Schema<IParamProps> = yup.object().shape({
+  ID: yup.number().positive().integer().required()
+});
+
+export { IMotor, bodyValidation, IQueryProps, queryValidation, IParamProps, paramValidation };
