@@ -37,6 +37,12 @@ router.get(
   MotoresController.createParamValidation,
   MotoresController.getbyid
 );
+router.put(
+  "/motores/:ID",
+  MotoresController.createParamValidation,
+  MotoresController.createBodyValidation,
+  MotoresController.updatebyid
+);
 
 router.post(
   "/marcas",
@@ -52,6 +58,12 @@ router.get(
   "/marcas/:ID",
   MarcasController.createParamValidation,
   MarcasController.getbyid
+);
+router.put(
+  "/marcas/:ID",
+  MarcasController.createParamValidation,
+  MarcasController.createBodyValidation,
+  MarcasController.updatebyid
 );
 
 router.post(
@@ -69,6 +81,12 @@ router.get(
   EstoqueController.createParamValidation,
   EstoqueController.getbyid
 );
+router.put(
+  "/estoque/:ID",
+  EstoqueController.createParamValidation,
+  EstoqueController.createBodyValidation,
+  EstoqueController.updatebyid
+);
 
 router.post(
   "/carcaca",
@@ -84,6 +102,12 @@ router.get(
   "/carcaca/:ID",
   CarcacaController.createParamValidation,
   CarcacaController.getbyid
+);
+router.put(
+  "/carcaca/:ID",
+  CarcacaController.createParamValidation,
+  CarcacaController.createBodyValidation,
+  CarcacaController.updatebyid
 );
 
 router.post(
@@ -101,6 +125,12 @@ router.get(
   EstadoController.createParamValidation,
   EstadoController.getbyid
 );
+router.put(
+  "/estado/:ID",
+  EstadoController.createParamValidation,
+  EstadoController.createBodyValidation,
+  EstadoController.updatebyid
+);
 
 router.post(
   "/cidade",
@@ -116,6 +146,12 @@ router.get(
   "/cidade/:ID",
   CidadeController.createParamValidation,
   CidadeController.getbyid
+);
+router.put(
+  "/cidade/:ID",
+  CidadeController.createParamValidation,
+  CidadeController.createBodyValidation,
+  CidadeController.updatebyid
 );
 
 router.post(
@@ -133,6 +169,12 @@ router.get(
   BairroController.createParamValidation,
   BairroController.getbyid
 );
+router.put(
+  "/bairro/:ID",
+  BairroController.createParamValidation,
+  BairroController.createBodyValidation,
+  BairroController.updatebyid
+);
 
 router.post(
   "/enderecos",
@@ -148,6 +190,12 @@ router.get(
   "/enderecos/:ID",
   EnderecoController.createParamValidation,
   EnderecoController.getbyid
+);
+router.put(
+  "/enderecos/:ID",
+  EnderecoController.createParamValidation,
+  EnderecoController.createBodyValidation,
+  EnderecoController.updatebyid
 );
 
 router.post(
@@ -165,6 +213,12 @@ router.get(
   FornecedorController.createParamValidation,
   FornecedorController.getbyid
 );
+router.put(
+  "/fornecedor/:ID",
+  FornecedorController.createParamValidation,
+  FornecedorController.createBodyValidation,
+  FornecedorController.updatebyid
+);
 
 router.post(
   "/prateleira",
@@ -180,6 +234,12 @@ router.get(
   "/prateleira/:ID",
   PrateleiraController.createParamValidation,
   PrateleiraController.getbyid
+);
+router.put(
+  "/prateleira/:ID",
+  PrateleiraController.createParamValidation,
+  PrateleiraController.createBodyValidation,
+  PrateleiraController.updatebyid
 );
 
 router.post(
@@ -197,6 +257,12 @@ router.get(
   UsuarioController.createParamValidation,
   UsuarioController.getbyid
 );
+router.put(
+  "/usuario/:ID",
+  UsuarioController.createParamValidation,
+  UsuarioController.createBodyValidation,
+  UsuarioController.updatebyid
+);
 
 router.post(
   "/setor",
@@ -212,6 +278,12 @@ router.get(
   "/setor/:ID",
   SetorController.createParamValidation,
   SetorController.getbyid
+);
+router.put(
+  "/setor/:ID",
+  SetorController.createParamValidation,
+  SetorController.createBodyValidation,
+  SetorController.updatebyid
 );
 
 router.post(
@@ -229,6 +301,12 @@ router.get(
   UsuarioLotadoController.createParamValidation,
   UsuarioLotadoController.getbyid
 );
+router.put(
+  "/usuario_setor/:ID",
+  UsuarioLotadoController.createParamValidation,
+  UsuarioLotadoController.createBodyValidation,
+  UsuarioLotadoController.updatebyid
+);
 
 router.post(
   "/movimentacao",
@@ -244,6 +322,12 @@ router.get(
   "/movimentacao/:ID",
   MovimentacaoController.createParamValidation,
   MovimentacaoController.getbyid
+);
+router.put(
+  "/movimentacao/:ID",
+  MovimentacaoController.createParamValidation,
+  MovimentacaoController.createBodyValidation,
+  MovimentacaoController.updatebyid
 );
 
 export { router };
