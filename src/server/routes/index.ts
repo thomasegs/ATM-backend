@@ -43,6 +43,11 @@ router.put(
   MotoresController.createBodyValidation,
   MotoresController.updatebyid
 );
+router.delete(
+  "/motores/:ID",
+  MotoresController.createParamValidation,
+  MotoresController.deletebyid
+);
 
 router.post(
   "/marcas",
@@ -64,6 +69,11 @@ router.put(
   MarcasController.createParamValidation,
   MarcasController.createBodyValidation,
   MarcasController.updatebyid
+);
+router.delete(
+  "/marcas/:ID",
+  MarcasController.createParamValidation,
+  MarcasController.deletebyid
 );
 
 router.post(
@@ -87,6 +97,11 @@ router.put(
   EstoqueController.createBodyValidation,
   EstoqueController.updatebyid
 );
+router.delete(
+  "/estoque/:ID",
+  EstoqueController.createParamValidation,
+  EstoqueController.deletebyid
+);
 
 router.post(
   "/carcaca",
@@ -108,6 +123,11 @@ router.put(
   CarcacaController.createParamValidation,
   CarcacaController.createBodyValidation,
   CarcacaController.updatebyid
+);
+router.delete(
+  "/carcaca/:ID",
+  CarcacaController.createParamValidation,
+  CarcacaController.deletebyid
 );
 
 router.post(
@@ -131,6 +151,11 @@ router.put(
   EstadoController.createBodyValidation,
   EstadoController.updatebyid
 );
+router.delete(
+  "/estado/:ID",
+  EstadoController.createParamValidation,
+  EstadoController.deletebyid
+);
 
 router.post(
   "/cidade",
@@ -152,6 +177,11 @@ router.put(
   CidadeController.createParamValidation,
   CidadeController.createBodyValidation,
   CidadeController.updatebyid
+);
+router.delete(
+  "/cidade/:ID",
+  CidadeController.createParamValidation,
+  CidadeController.deletebyid
 );
 
 router.post(
@@ -175,6 +205,11 @@ router.put(
   BairroController.createBodyValidation,
   BairroController.updatebyid
 );
+router.delete(
+  "/bairro/:ID",
+  BairroController.createParamValidation,
+  BairroController.deletebyid
+);
 
 router.post(
   "/enderecos",
@@ -196,6 +231,11 @@ router.put(
   EnderecoController.createParamValidation,
   EnderecoController.createBodyValidation,
   EnderecoController.updatebyid
+);
+router.delete(
+  "/enderecos/:ID",
+  EnderecoController.createParamValidation,
+  EnderecoController.deletebyid
 );
 
 router.post(
@@ -219,6 +259,11 @@ router.put(
   FornecedorController.createBodyValidation,
   FornecedorController.updatebyid
 );
+router.delete(
+  "/fornecedor/:ID",
+  FornecedorController.createParamValidation,
+  FornecedorController.deletebyid
+);
 
 router.post(
   "/prateleira",
@@ -240,6 +285,11 @@ router.put(
   PrateleiraController.createParamValidation,
   PrateleiraController.createBodyValidation,
   PrateleiraController.updatebyid
+);
+router.delete(
+  "/prateleira/:ID",
+  PrateleiraController.createParamValidation,
+  PrateleiraController.deletebyid
 );
 
 router.post(
@@ -263,6 +313,11 @@ router.put(
   UsuarioController.createBodyValidation,
   UsuarioController.updatebyid
 );
+router.delete(
+  "/usuario/:ID",
+  UsuarioController.createParamValidation,
+  UsuarioController.deletebyid
+);
 
 router.post(
   "/setor",
@@ -284,6 +339,11 @@ router.put(
   SetorController.createParamValidation,
   SetorController.createBodyValidation,
   SetorController.updatebyid
+);
+router.delete(
+  "/setor/:ID",
+  SetorController.createParamValidation,
+  SetorController.deletebyid
 );
 
 router.post(
@@ -307,6 +367,11 @@ router.put(
   UsuarioLotadoController.createBodyValidation,
   UsuarioLotadoController.updatebyid
 );
+router.delete(
+  "/usuario_setor/:ID",
+  UsuarioLotadoController.createParamValidation,
+  UsuarioLotadoController.deletebyid
+);
 
 router.post(
   "/movimentacao",
@@ -328,6 +393,11 @@ router.put(
   MovimentacaoController.createParamValidation,
   MovimentacaoController.createBodyValidation,
   MovimentacaoController.updatebyid
+);
+router.delete(
+  "/movimentacao/:ID",
+  MovimentacaoController.createParamValidation,
+  MovimentacaoController.deletebyid
 );
 
 export { router };
