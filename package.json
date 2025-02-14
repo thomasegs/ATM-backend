@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "tsx watch src/index.ts"
   },
   "author": "Thomas Erik Gaspar <thomaserikgaspar@hotmail.com>",
@@ -21,8 +21,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.2",
     "eslint": "^9.17.0",
     "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "typescript-eslint": "^8.19.1"
   }
 }
