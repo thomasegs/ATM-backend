@@ -11,5 +11,5 @@ export const create = async (
 ) => {
   console.log(req.body);
 
-  res.status(StatusCodes.INTERNAL_SERVER_ERROR).send("Create de bairro ainda não implementado.");
+  res.status(StatusCodes.CREATED).json(1);
 };
