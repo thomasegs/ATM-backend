@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "postinstall": "tsc",
+    "production": "node ./dist/index.js"
   },
   "author": "Thomas Erik Gaspar <thomaserikgaspar@hotmail.com>",
   "license": "ISC",
@@ -29,5 +31,8 @@
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "typescript-eslint": "^8.19.1"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
